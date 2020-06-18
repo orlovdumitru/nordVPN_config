@@ -1,7 +1,7 @@
 import os
 import math
 import apply_vpn
-from tools import head_foot, stop_vpn
+from tools import head_foot, stop_vpn, clear_screen
 import getpass
 from setup import *
 
@@ -15,6 +15,7 @@ class Run(object):
 
     
     def linux_commands(self):
+        clear_screen()
         user_name = input("VPN User name: ")
         password = getpass.getpass("VPN Password:")
         self.create_sh(user_name, password)
