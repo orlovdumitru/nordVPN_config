@@ -13,7 +13,7 @@ class Global_vars(object):
 
 def get_screen_size():
     '''find terminal width and height'''
-    terminal_height, terminal_width = [int(n) for n in os.popen('stty size', 'r').read().split()]
+    terminal_width, terminal_height = os.get_terminal_size()
     return terminal_width, terminal_height
 
 
@@ -23,7 +23,7 @@ def head_foot(greet_text='', delimite='='):
     left_right_space = ' ' * math.floor(((terminal_width - len(greet_text))/2))
     if len(greet_text) > 0:
         print(delimite * terminal_width)
-        print(f'{left_right_space}{greet_text}{left_right_space}')
+        print(greet_text.center(terminal_width))
         print(delimite * terminal_width)
     else:
         print(delimite * terminal_width)

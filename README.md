@@ -7,7 +7,7 @@ https://support.nordvpn.com/Connectivity/Linux/1047409422/How-can-I-connect-to-N
 
 2) navigate to openvpn folder and create a nordVPN folder
     cd /etc/openvpn
-    sudo mdir nodrVPN
+    sudo mkdir nordVPN
     cd nordVPN
 
 3) get a list of nodVPN:
@@ -29,3 +29,9 @@ https://support.nordvpn.com/Connectivity/Linux/1047409422/How-can-I-connect-to-N
     python3 run.py
 
 if vpn need to be stoped run [python3 run.py] and will offer option to kill all [openvpn] important to know if system go to sleep and vpn was not stoped, after sleep sesion may result in not internet connection error do a [python3 run.py] and select to kill all openvpns
+
+>>>> OR:
+
+after cloning git "cd" into folder and start "auto_setup.sh"
+    chmod +x auto_setup.sh
+    ./auto_setup.sh
