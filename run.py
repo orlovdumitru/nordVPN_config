@@ -73,6 +73,7 @@ class Run(object):
 
 
 if __name__ == "__main__":
+    
     if Run.start_vpn():
         run = Run()
         # stop_vpn()

@@ -37,3 +37,7 @@ if vpn need to be stoped run [python3 run.py] and will offer option to kill all 
 after cloning git "cd" into folder and start "auto_setup.sh"
     chmod +x auto_setup.sh
     ./auto_setup.sh
+
+===================================================================================
+connect to vpn:
+1) python3 run.py
