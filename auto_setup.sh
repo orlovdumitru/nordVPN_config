@@ -3,14 +3,13 @@
 clear
 echo " -> To atomate setup process options are: "
 echo " o -> if you need to install OpenVPN else leave blank"
+echo " n -> if network manager is missing"
 echo " "
 
 read -p "Enter options: " options
 
 if [[ "$options" == *"o"* ]]
 then
-    echo " "
-    echo "-> updating system"
     sudo apt-get update
     
     echo " "
@@ -18,6 +17,15 @@ then
     sudo apt-get install openvpn -y
     sudo apt-get update
 fi
+if [["$options" == *"n"* ]]
+then
+    echo " "
+    echo "-> installing NetworkManager"
+    sudo apt-get update
+    sudo apt-get install network-manager -y
+fi
+sudo apt-get update
+
 echo " "
 echo "-> creating nordVPN folder"
 sudo mkdir /etc/openvpn/nordVPN
