@@ -1,5 +1,7 @@
-
 terminal interface connecting to NordVPN using OpenVPN. Allow user select from over 11k vpns offered by NordVPN
+
+
+python3 must be installed
 
 https://support.nordvpn.com/Connectivity/Linux/1047409422/How-can-I-connect-to-NordVPN-using-Linux-Terminal.htm
 1) OpenVPN must be installed:

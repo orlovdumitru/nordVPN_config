@@ -61,7 +61,7 @@ class Run(object):
     @staticmethod
     def start_vpn():
         os.system('clear')
-        greet_text = 'after using vpn and not stoping sevice may cause connection problem'
+        greet_text = 'after using vpn and not stoping sevice may cause internet connection problem'
         head_foot(greet_text, '*')
         start = input('kill(k) | start(s) vpn: ')
         stop_vpn()
@@ -75,5 +75,5 @@ class Run(object):
 if __name__ == "__main__":
     if Run.start_vpn():
         run = Run()
-        stop_vpn()
+        # stop_vpn()
         run.linux_commands()

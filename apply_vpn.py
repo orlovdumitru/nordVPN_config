@@ -6,15 +6,16 @@ from tools import head_foot, display_list, clear_screen
 class ApplyVpn(object):
 
     def __init__(self):
+        self.main_path = NORD_VPN_COUNTRIES
         self.server_path = None
 
 
     def select_vpn(self):
         clear_screen()
         head_foot('Welcome to openvpn')
-        all_countries = os.listdir(NORD_VPN_COUNTRIES)
+        all_countries = os.listdir(self.main_path)
         country = display_list(all_countries)
-        single_country_servers = f"{NORD_VPN_COUNTRIES}/{country}"
+        single_country_servers = f"{self.main_path}/{country}"
         list_of_vpns = os.listdir(single_country_servers)
 
         tcp_vpn = []
