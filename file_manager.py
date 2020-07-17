@@ -24,7 +24,7 @@ class Manage(object):
 
     def move_file(self, file, folder):
         '''move files, takes file name and folder name'''
-        t_file = f"{self.path}/{file}"
+        t_file = os.path.join(self.path, file)
         t_folder = self.create_folder(folder)
         shutil.move(t_file, t_folder)
 
