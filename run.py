@@ -1,5 +1,6 @@
 import os
 import math
+import json
 import apply_vpn
 from tools import head_foot, stop_vpn, clear_screen
 import getpass
@@ -16,8 +17,16 @@ class Run(object):
     
     def linux_commands(self):
         clear_screen()
-        user_name = input("VPN User name: ")
-        password = getpass.getpass("VPN Password:")
+        try:
+            with open("/home/dima/secret/nordVPN.json", 'r') as file:
+                data = file.read()
+                creed = json.loads(data)
+                user_name = creed['user_name']
+                password = creed['password']
+        except:
+            user_name = input("VPN User name: ")
+            password = getpass.getpass("VPN Password:")
+
         self.create_sh(user_name, password)
 
         start_vpn = f'''
