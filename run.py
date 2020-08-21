@@ -70,7 +70,7 @@ class Run(object):
     @staticmethod
     def start_vpn():
         os.system('clear')
-        greet_text = 'after using vpn and not stoping sevice may cause internet connection problem'
+        greet_text = 'after using vpn and not stoping service may cause internet connection problem'
         head_foot(greet_text, '*')
         start = input('kill(k) | start(s) vpn: ')
         stop_vpn()

@@ -71,5 +71,3 @@ class ApplyVpn(object):
             return self.select_server(vpns)
 
         return (vpns[int(index)][0])
-
-   
